@@ -223,7 +223,8 @@
             convertedReplacement = replacement.bind(regexp);
             break;
           default:
-            return String(replacement);
+            convertedReplacement = String(replacement);
+            break;
         }
         return replace.call(this, regexp._regexp, convertedReplacement);
       } else {
